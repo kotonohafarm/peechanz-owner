@@ -120,9 +120,8 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
           <Image
             src="/images/peechanz/peechanz.jpg"
             alt="ぴーちゃん"
-            layout="fill"
-            objectFit="contain"
-            className="mx-auto"
+            fill={true}
+            style={{ objectFit: 'contain' }}
           />
         </div>
         {/* <PurchaseButton /> */}

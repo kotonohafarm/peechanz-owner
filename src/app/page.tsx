@@ -117,11 +117,10 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
         <p className="text-lg text-gray-600 mt-2">{data.heroSection.recruitmentPeriod}</p>
         <p className="text-lg font-bold text-red-600">{data.heroSection.limitedNumber}</p>
         <div className="mt-8 w-full h-64 relative">
-          <Image
+          <img
             src="/images/peechanz/peechanz.jpg"
             alt="ぴーちゃん"
-            fill={true}
-            style={{ objectFit: 'contain' }}
+            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
           />
         </div>
         {/* <PurchaseButton /> */}

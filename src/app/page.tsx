@@ -19,6 +19,10 @@ const query = groq`
       callToActionText,
       recruitmentPeriod,
       limitedNumber,
+      heroImage {
+        asset->{url},
+        alt,
+      },
     },
     aboutSection {
       title,
@@ -117,12 +121,14 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
         <p className="text-lg text-gray-600 mt-2">{data.heroSection.recruitmentPeriod}</p>
         <p className="text-lg font-bold text-red-600">{data.heroSection.limitedNumber}</p>
         <div className="mt-8 w-full h-64 relative">
-          <Image
-            src="/peechanz.jpg"
-            alt="ぴーちゃん"
-            fill={true}
-            style={{ objectFit: 'contain' }}
-          />
+          {data.heroSection.heroImage && (
+            <Image
+              src={data.heroSection.heroImage.asset.url}
+              alt={data.heroSection.heroImage.alt || 'ヒーロー画像'}
+              fill={true}
+              style={{ objectFit: 'contain' }}
+            />
+          )}
         </div>
         {/* <PurchaseButton /> */}
       </section>

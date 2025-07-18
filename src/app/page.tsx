@@ -116,7 +116,15 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
         <p className="text-xl font-bold text-yellow-800 mt-4">{data.heroSection.callToActionText}</p>
         <p className="text-lg text-gray-600 mt-2">{data.heroSection.recruitmentPeriod}</p>
         <p className="text-lg font-bold text-red-600">{data.heroSection.limitedNumber}</p>
-        {/* 画像はSanityスキーマに追加されていないため、ここでは表示しません */}
+        <div className="mt-8 w-full h-64 relative">
+          <Image
+            src="/images/peechanz/peechanz.jpg"
+            alt="ぴーちゃん"
+            layout="fill"
+            objectFit="contain"
+            className="mx-auto"
+          />
+        </div>
         {/* <PurchaseButton /> */}
       </section>
 

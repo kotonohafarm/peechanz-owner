@@ -279,6 +279,14 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
           {data.contactSection.instruction}
         </p>
         {/* LINE公式アカウントへのリンクは別途追加 */}
+        <a
+          href="https://lin.ee/n652Uqp"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105"
+        >
+          LINEでお問い合わせ
+        </a>
       </section>
     </div>
   );

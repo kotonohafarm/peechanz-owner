@@ -56,6 +56,10 @@ const query = groq`
       productDescription,
       detailedBenefits,
       note,
+      pricingImage {
+        asset->{url},
+        alt,
+      },
     },
     faqSection {
       title,
@@ -224,6 +228,17 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
           ))}
         </ul>
         <p className="text-sm text-gray-500 mt-2 text-center">{data.pricingSection.note}</p>
+        {/* ここに画像を追加 */}
+        {data.pricingSection.pricingImage && (
+          <div className="mt-8 w-full h-64 relative mx-auto">
+            <Image
+              src={data.pricingSection.pricingImage.asset.url}
+              alt={data.pricingSection.pricingImage.alt || '価格セクション画像'}
+              fill={true}
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+        )}
         {/* <PurchaseButton /> */}
       </section>
 

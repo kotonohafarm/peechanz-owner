@@ -256,6 +256,28 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             <li key={index}>{item}</li>
           ))}
         </ul>
+        <p className="text-lg font-bold text-red-700">{data.pricingSection.recruitmentText}</p>
+          <p className="font-bold text-xl text-red-600 mt-2 bg-yellow-200 p-1 rounded">{data.pricingSection.promoCodeText}</p>
+          <div className="text-center">
+            <PurchaseButton
+              link={data.pricingSection.purchaseLink}
+              text="お試し価格で今すぐ申し込む"
+              messageClassName="text-white"
+            />
+          </div>
+        </div>
+
+        <div className="text-center mb-8">
+          <p className="text-2xl font-semibold text-gray-700">{data.pricingSection.regularPriceText}</p>
+          <p className="text-4xl font-extrabold text-green-600 mb-4">{data.pricingSection.regularPrice}</p>
+        </div>
+
+        <p className="text-xl font-bold text-yellow-800 mb-4">{data.pricingSection.productDescription}</p>
+        <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 mb-8">
+          {data.pricingSection.detailedBenefits.map((item: string, index: number) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
         <p className="text-sm text-gray-500 mt-2 text-center">{data.pricingSection.note}</p>
         {/* ここに画像を追加 */}
         {data.pricingSection.pricingImage && (
@@ -268,13 +290,6 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             />
           </div>
         )}
-        <div className="text-center">
-          <PurchaseButton 
-            link={data.pricingSection.purchaseLink}
-            text="お試し価格で今すぐ申し込む"
-            messageClassName="text-white"
-          />
-        </div>
       </section>
 
       {/* よくある質問セクション */}

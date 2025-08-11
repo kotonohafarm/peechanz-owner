@@ -29,13 +29,13 @@ export const PurchaseButton: React.FC<PurchaseButtonProps> = ({
   };
 
   return (
-    <div className="inline-block bg-orange-500 hover:bg-orange-600 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 mt-8">
+    <div className="inline-block rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 mt-8" style={{ backgroundColor: 'orange' }}>
       <a
         href={link}
         onClick={handleClick}
         target={isExternal ? '_blank' : '_self'}
         rel={isExternal ? 'noopener noreferrer' : undefined}
-        className="block w-full h-full font-bold py-3 px-8 text-xl" // Removed bg- and hover:bg-
+        className="block w-full h-full font-bold py-3 px-8 text-xl"
       >
         <span className={messageClassName}>{text}</span>
       </a>

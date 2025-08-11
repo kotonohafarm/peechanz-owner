@@ -254,6 +254,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
           <p className="text-2xl font-semibold text-gray-700">{data.pricingSection.regularPriceText}</p>
           <p className="text-4xl font-extrabold text-green-600 mb-4">{data.pricingSection.regularPrice}</p>
         </div>
+        </div> {/* Added this closing div */}
 
         <p className="text-xl font-bold text-yellow-800 mb-4">{data.pricingSection.productDescription}</p>
         <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 mb-8">
@@ -275,6 +276,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
         )}
         <div className="text-center">
           </div>
+        </div> {/* Added this closing div */}
       </section>
 
       {/* よくある質問セクション */}

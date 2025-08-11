@@ -22,7 +22,8 @@ export interface HeroSection {
   callToActionText: string;
   recruitmentPeriod: string;
   limitedNumber: string;
-  heroImage: SanityImage;
+  heroImage1: SanityImage;
+  heroImage2: SanityImage;
 }
 
 export interface AboutSection {

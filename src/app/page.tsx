@@ -20,7 +20,11 @@ const query = groq`
       callToActionText,
       recruitmentPeriod,
       limitedNumber,
-      heroImage {
+      heroImage1 {
+        asset->{url},
+        alt,
+      },
+      heroImage2 {
         asset->{url},
         alt,
       },
@@ -142,14 +146,27 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
         <p className="text-xl font-bold text-yellow-800 mt-4">{data.heroSection.callToActionText}</p>
         <p className="text-lg text-gray-600 mt-2">{data.heroSection.recruitmentPeriod}</p>
         <p className="text-lg font-bold text-red-600">{data.heroSection.limitedNumber}</p>
-        <div className="mt-8 w-full h-64 relative">
-          {data.heroSection.heroImage && (
-            <Image
-              src={data.heroSection.heroImage.asset.url}
-              alt={data.heroSection.heroImage.alt || 'ヒーロー画像'}
-              fill={true}
-              style={{ objectFit: 'contain' }}
-            />
+        {/* Sanity StudioでheroSectionにheroImage1とheroImage2を追加してください */}
+        <div className="mt-8 w-full flex flex-col md:flex-row justify-around items-center space-y-4 md:space-y-0 md:space-x-4">
+          {data.heroSection.heroImage1 && (
+            <div className="w-full md:w-1/2 h-64 relative">
+              <Image
+                src={data.heroSection.heroImage1.asset.url}
+                alt={data.heroSection.heroImage1.alt || 'ヒーロー画像1'}
+                fill={true}
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
+          )}
+          {data.heroSection.heroImage2 && (
+            <div className="w-full md:w-1/2 h-64 relative">
+              <Image
+                src={data.heroSection.heroImage2.asset.url}
+                alt={data.heroSection.heroImage2.alt || 'ヒーロー画像2'}
+                fill={true}
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
           )}
         </div>
         <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />

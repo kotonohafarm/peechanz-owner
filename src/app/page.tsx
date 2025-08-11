@@ -252,6 +252,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
           <p className="text-lg text-gray-700">{data.pricingSection.limitedOfferNote}</p>
           <p className="text-lg font-bold text-red-700">{data.pricingSection.recruitmentText}</p>
           <p className="font-bold text-xl text-red-600 mt-2 bg-yellow-200 p-1 rounded">{data.pricingSection.promoCodeText}</p>
+          <p className="font-bold text-2xl text-blue-700 mt-4">毎月20日から25日限定募集</p>
           <div className="text-center mb-8">
             <PurchaseButton
               link={recruitmentOpen ? data.pricingSection.purchaseLink : '#'}

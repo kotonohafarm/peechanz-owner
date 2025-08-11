@@ -120,7 +120,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
     <div className="container mx-auto px-4 py-8 space-y-12">
       {/* ヒーローセクション */}
       <section className="relative text-center bg-yellow-50 p-8 rounded-lg shadow-md">
-        <div className="absolute top-4 left-4 w-24 h-24">
+        <div className="absolute top-4 left-4 w-24 h-24 sm:w-16 sm:h-16 sm:top-2 sm:left-2">
           <Image
             src="/images/rogo/kotonohafarm-rogo.png"
             alt="ことのはファームロゴ"
@@ -128,7 +128,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             objectFit="contain"
           />
         </div>
-        <div className="absolute top-4 right-4 w-24 h-24">
+        <div className="absolute top-4 right-4 w-24 h-24 sm:w-16 sm:h-16 sm:top-2 sm:right-2">
           <Image
             src="/images/rogo/kodawari-rogo.png"
             alt="こだわりロゴ"

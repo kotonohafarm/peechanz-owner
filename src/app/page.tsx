@@ -174,7 +174,11 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             </div>
           )}
         </div>
-        <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
+        {recruitmentOpen ? (
+          <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
+        ) : (
+          <p className="text-xl font-bold text-red-600 mt-8">次回の共同オーナー募集は20日から25日まで</p>
+        )}
       </section>
 
       {/* アバウトセクション */}
@@ -197,7 +201,11 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
               </div>
             )}
             <div className="text-center">
-              <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
+              {recruitmentOpen ? (
+                <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
+              ) : (
+                <p className="text-xl font-bold text-white mt-8">次回の共同オーナー募集は20日から25日まで</p>
+              )}
             </div>
           </section>
 
@@ -235,7 +243,11 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
           )}
         </div>
         <div className="text-center">
-          <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
+          {recruitmentOpen ? (
+            <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
+          ) : (
+            <p className="text-xl font-bold text-red-600 mt-8">次回の共同オーナー募集は20日から25日まで</p>
+          )}
         </div>
       </section>
 
@@ -311,7 +323,11 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
           </div>
         )}
         <div className="text-center">
-          <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
+          {recruitmentOpen ? (
+            <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
+          ) : (
+            <p className="text-xl font-bold text-red-600 mt-8">次回の共同オーナー募集は20日から25日まで</p>
+          )}
         </div>
       </section>
 

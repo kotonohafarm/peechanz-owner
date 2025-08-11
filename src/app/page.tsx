@@ -6,7 +6,6 @@ import { client } from '../../sanity.config'; // パスを修正
 import { groq } from 'next-sanity';
 import { useState, useEffect } from 'react';
 import { PeechanzOwnerPageData, PortableTextBlock, Faq } from '@/types/sanity';
-// PurchaseButton はこのLPでは使用しないためコメントアウト
 import { PurchaseButton } from '../../components/PurchaseButton';
 
 // Sanityからデータをフェッチするクエリ
@@ -275,7 +274,8 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
           </div>
         )}
         <div className="text-center">
-          </section>
+          </div>
+      </section>
 
       {/* よくある質問セクション */}
       <section className="bg-yellow-50 p-8 rounded-lg shadow-md">

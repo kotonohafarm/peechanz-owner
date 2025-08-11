@@ -242,7 +242,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
           <p className="text-lg text-gray-700">{data.pricingSection.limitedOfferNote}</p>
           <p className="text-lg font-bold text-red-700">{data.pricingSection.recruitmentText}</p>
           <p className="font-bold text-xl text-red-600 mt-2 bg-yellow-200 p-1 rounded">{data.pricingSection.promoCodeText}</p>
-          <div className="text-center">
+          <div className="text-center mb-8">
             <PurchaseButton
               link={data.pricingSection.purchaseLink}
               text="お試し価格で今すぐ申し込む"

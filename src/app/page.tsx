@@ -256,7 +256,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             <PurchaseButton
               link={recruitmentOpen ? data.pricingSection.purchaseLink : '#'}
               text={recruitmentOpen ? "お試し価格で今すぐ申し込む" : "募集期間外"}
-              messageClassName={recruitmentOpen ? "text-white" : "text-gray-400"}
+              messageClassName={recruitmentOpen ? "text-white" : "text-white"}
               disabled={!recruitmentOpen}
             />
           </div>

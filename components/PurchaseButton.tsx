@@ -39,7 +39,11 @@ export const PurchaseButton: React.FC<PurchaseButtonProps> = ({ link }) => {
   }, []);
 
   if (!isRecruitmentPeriod) {
-    return null; // 募集期間外はボタンを表示しない
+    return (
+      <p className="text-center text-lg text-gray-600 mt-8">
+        オーナー募集は毎月20日から25日限定
+      </p>
+    );
   }
 
   return (

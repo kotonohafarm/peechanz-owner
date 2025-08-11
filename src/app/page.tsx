@@ -120,7 +120,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
     <div className="container mx-auto px-4 py-8 space-y-12">
       {/* ヒーローセクション */}
       <section className="relative text-center bg-yellow-50 p-8 rounded-lg shadow-md">
-        <div className="absolute top-4 left-4 w-24 h-24 sm:w-16 sm:h-16 sm:top-2 sm:left-2">
+        <div className="absolute top-2 left-2 w-16 h-16 md:w-24 md:h-24 md:top-4 md:left-4">
           <Image
             src="/images/rogo/kotonohafarm-rogo.png"
             alt="ことのはファームロゴ"
@@ -128,7 +128,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             objectFit="contain"
           />
         </div>
-        <div className="absolute top-4 right-4 w-24 h-24 sm:w-16 sm:h-16 sm:top-2 sm:right-2">
+        <div className="absolute top-2 right-2 w-16 h-16 md:w-24 md:h-24 md:top-4 md:right-4">
           <Image
             src="/images/rogo/kodawari-rogo.png"
             alt="こだわりロゴ"
@@ -136,7 +136,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             objectFit="contain"
           />
         </div>
-        <h1 className="text-4xl font-bold text-yellow-800 mb-4 sm:px-24">{data.heroSection.mainTitle}</h1>
+        <h1 className="text-4xl font-bold text-yellow-800 mb-4 px-8 md:px-24">{data.heroSection.mainTitle}</h1>
         <p className="text-2xl font-semibold text-yellow-700 mb-6">{data.heroSection.subTitle}</p>
         <p className="text-3xl font-extrabold text-orange-600 mb-8">{data.heroSection.catchphrase}</p>
         <p className="text-xl text-gray-700">

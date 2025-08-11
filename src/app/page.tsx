@@ -225,7 +225,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
           <p className="text-4xl font-extrabold text-red-600 mb-4">{data.pricingSection.trialPrice}</p>
           <p className="text-lg text-gray-700">{data.pricingSection.limitedOfferNote}</p>
           <p className="text-lg font-bold text-red-700">{data.pricingSection.recruitmentText}</p>
-          <p className="font-bold text-xl text-red-600 mt-2">{data.pricingSection.promoCodeText}</p>
+          <p className="font-bold text-xl text-red-600 mt-2 bg-yellow-200 p-1 rounded">{data.pricingSection.promoCodeText}</p>
         </div>
 
         <div className="text-center mb-8">

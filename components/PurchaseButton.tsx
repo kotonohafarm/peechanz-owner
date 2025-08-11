@@ -5,9 +5,10 @@ import React, { useState, useEffect } from 'react';
 
 interface PurchaseButtonProps {
   link: string; // ボタンのリンク先
+  messageClassName?: string; // メッセージのクラス名
 }
 
-export const PurchaseButton: React.FC<PurchaseButtonProps> = ({ link }) => {
+export const PurchaseButton: React.FC<PurchaseButtonProps> = ({ link, messageClassName }) => {
   const [isRecruitmentPeriod, setIsRecruitmentPeriod] = useState(false);
 
   useEffect(() => {
@@ -40,7 +41,7 @@ export const PurchaseButton: React.FC<PurchaseButtonProps> = ({ link }) => {
 
   if (!isRecruitmentPeriod) {
     return (
-      <p className="text-center text-xl font-bold text-white mt-8">
+      <p className={`text-center text-xl font-bold mt-8 ${messageClassName || 'text-gray-600'}`}>
         オーナー募集は毎月20日から25日限定
       </p>
     );

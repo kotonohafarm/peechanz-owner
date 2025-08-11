@@ -150,7 +150,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             />
           )}
         </div>
-        <PurchaseButton link="#pricing-section" />
+        <PurchaseButton link="#pricing-section" messageClassName="text-gray-700" />
       </section>
 
       {/* アバウトセクション */}
@@ -172,7 +172,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
                 />
               </div>
             )}
-            <PurchaseButton link="#pricing-section" />
+            <PurchaseButton link="#pricing-section" messageClassName="text-white" />
           </section>
 
       {/* 特典セクション */}
@@ -208,7 +208,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             </div>
           )}
         </div>
-        <PurchaseButton link="#pricing-section" />
+        <PurchaseButton link="#pricing-section" messageClassName="text-gray-700" />
       </section>
 
       {/* 価格セクション */}
@@ -272,7 +272,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             />
           </div>
         )}
-        <PurchaseButton link="#pricing-section" />
+        <PurchaseButton link="#pricing-section" messageClassName="text-gray-700" />
       </section>
 
       {/* コンタクトセクション */}
@@ -281,7 +281,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
         <p className="text-lg text-gray-700 mb-8">
           {data.contactSection.instruction}
         </p>
-        <PurchaseButton link="#pricing-section" />
+        <PurchaseButton link="#pricing-section" messageClassName="text-gray-700" />
         {/* LINE公式アカウントへのリンクは別途追加 */}
         <a
           href="https://lin.ee/n652Uqp"

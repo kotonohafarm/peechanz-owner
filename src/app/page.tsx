@@ -136,7 +136,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             objectFit="contain"
           />
         </div>
-        <h1 className="text-4xl font-bold text-yellow-800 mb-4 px-8 md:px-24">{data.heroSection.mainTitle}</h1>
+        <h1 className="text-4xl font-bold text-yellow-800 mb-4 px-16 md:px-24">{data.heroSection.mainTitle}</h1>
         <p className="text-2xl font-semibold text-yellow-700 mb-6">{data.heroSection.subTitle}</p>
         <p className="text-3xl font-extrabold text-orange-600 mb-8">{data.heroSection.catchphrase}</p>
         <p className="text-xl text-gray-700">

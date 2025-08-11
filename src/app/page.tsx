@@ -174,7 +174,9 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
                 />
               </div>
             )}
-            <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
+            <div className="text-center">
+              <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
+            </div>
           </section>
 
       {/* 特典セクション */}
@@ -210,7 +212,9 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             </div>
           )}
         </div>
-        <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-yellow-800" />
+        <div className="text-center">
+          <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-yellow-800" />
+        </div>
       </section>
 
       {/* 価格セクション */}
@@ -280,7 +284,9 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             />
           </div>
         )}
-        <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-yellow-800" />
+        <div className="text-center">
+          <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-yellow-800" />
+        </div>
       </section>
 
       {/* コンタクトセクション */}
@@ -289,7 +295,9 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
         <p className="text-lg text-gray-700 mb-8">
           {data.contactSection.instruction}
         </p>
-        <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-yellow-800" />
+        <div className="mb-4">
+          <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-yellow-800" />
+        </div>
         {/* LINE公式アカウントへのリンクは別途追加 */}
         <a
           href="https://lin.ee/n652Uqp"

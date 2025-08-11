@@ -34,7 +34,7 @@ export const PurchaseButton: React.FC<PurchaseButtonProps> = ({
       onClick={handleClick}
       target={isExternal ? '_blank' : '_self'}
       rel={isExternal ? 'noopener noreferrer' : undefined}
-      className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg mt-8"
+      className="inline-block bg-orange-500 hover:bg-orange-600 font-bold py-3 px-8 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg mt-8"
     >
       <span className={messageClassName}>{text}</span>
     </a>

@@ -275,8 +275,8 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
           </div>
         )}
         <div className="text-center">
-          </div>
-        </div> {/* Added this closing div */}
+          <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
+        </div>
       </section>
 
       {/* よくある質問セクション */}

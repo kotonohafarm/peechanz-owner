@@ -35,6 +35,14 @@ const query = groq`
     benefitsSection {
       title,
       benefitItems,
+      benefitImage1 {
+        asset->{url},
+        alt,
+      },
+      benefitImage2 {
+        asset->{url},
+        alt,
+      },
     },
     pricingSection {
       callToAction,
@@ -166,6 +174,29 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             {block.children[0].text}
           </p>
         ))}
+        {/* ここに画像を追加 */}
+        <div className="flex flex-wrap justify-center gap-4 mt-8">
+          {data.benefitsSection.benefitImage1 && (
+            <div className="w-full md:w-1/2 lg:w-1/3 h-64 relative">
+              <Image
+                src={data.benefitsSection.benefitImage1.asset.url}
+                alt={data.benefitsSection.benefitImage1.alt || '特典画像1'}
+                fill={true}
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
+          )}
+          {data.benefitsSection.benefitImage2 && (
+            <div className="w-full md:w-1/2 lg:w-1/3 h-64 relative">
+              <Image
+                src={data.benefitsSection.benefitImage2.asset.url}
+                alt={data.benefitsSection.benefitImage2.alt || '特典画像2'}
+                fill={true}
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
+          )}
+        </div>
       </section>
 
       {/* 価格セクション */}

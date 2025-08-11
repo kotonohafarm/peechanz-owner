@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { client } from '../../sanity.config'; // パスを修正
 import { groq } from 'next-sanity';
 import { useState, useEffect } from 'react';
+import { PeechanzOwnerPageData, PortableTextBlock, Faq } from '@/types/sanity';
 // PurchaseButton はこのLPでは使用しないためコメントアウト
 import { PurchaseButton } from '../../components/PurchaseButton';
 
@@ -81,7 +82,7 @@ const query = groq`
 `;
 
 export default function PeechanzOwnerPage() { // Trigger redeploy
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<PeechanzOwnerPageData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -157,7 +158,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
       {/* アバウトセクション */}
       <section className="bg-amber-700 p-8 rounded-lg shadow-md">
             <h2 className="text-3xl font-bold text-white mb-6">{data.aboutSection.title}</h2>
-            {data.aboutSection.description.map((block: any, index: number) => (
+            {data.aboutSection.description.map((block: PortableTextBlock, index: number) => (
               <p key={index} className="text-lg text-white mb-4">
                 {block.children[0].text}
               </p>
@@ -179,7 +180,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
       {/* 特典セクション */}
       <section className="bg-yellow-50 p-8 rounded-lg shadow-md">
         <h2 className="text-3xl font-bold text-yellow-800 mb-6">{data.benefitsSection.title}</h2>
-        {data.benefitsSection.benefitItems.map((block: any, index: number) => (
+        {data.benefitsSection.benefitItems.map((block: PortableTextBlock, index: number) => (
           <p key={index} className="text-lg text-gray-700 mb-4">
             {block.children[0].text}
           </p>
@@ -259,10 +260,10 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
       <section className="bg-yellow-50 p-8 rounded-lg shadow-md">
         <h2 className="text-3xl font-bold text-yellow-800 mb-6 text-center">{data.faqSection.title}</h2>
         <div className="space-y-4">
-          {data.faqSection.faqs.map((faq: any, index: number) => (
+          {data.faqSection.faqs.map((faq: Faq, index: number) => (
             <div key={index}>
               <h3 className="text-xl font-semibold text-yellow-700">{faq.question}</h3>
-              {faq.answer.map((block: any, blockIndex: number) => (
+              {faq.answer.map((block: PortableTextBlock, blockIndex: number) => (
                 <p key={blockIndex} className="text-lg text-gray-700">{block.children[0].text}</p>
               ))}
             </div>

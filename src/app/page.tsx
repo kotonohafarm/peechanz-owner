@@ -148,20 +148,10 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
         {/* Sanity StudioでheroSectionにheroImage1とheroImage2を追加してください */}
         <div className="mt-8 w-full flex flex-col md:flex-row justify-around items-center space-y-4 md:space-y-0 md:space-x-4">
           {data.heroSection.heroImage1 && (
-            <div className="w-full md:w-1/2 h-64 relative">
+            <div className="w-full h-64 relative">
               <Image
                 src={data.heroSection.heroImage1.asset.url}
                 alt={data.heroSection.heroImage1.alt || 'ヒーロー画像1'}
-                fill={true}
-                style={{ objectFit: 'contain' }}
-              />
-            </div>
-          )}
-          {data.heroSection.heroImage2 && (
-            <div className="w-full md:w-1/2 h-64 relative">
-              <Image
-                src={data.heroSection.heroImage2.asset.url}
-                alt={data.heroSection.heroImage2.alt || 'ヒーロー画像2'}
                 fill={true}
                 style={{ objectFit: 'contain' }}
               />

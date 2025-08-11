@@ -6,7 +6,7 @@ import { client } from '../../sanity.config'; // パスを修正
 import { groq } from 'next-sanity';
 import { useState, useEffect } from 'react';
 // PurchaseButton はこのLPでは使用しないためコメントアウト
-// import { PurchaseButton } from '../../components/PurchaseButton';
+import { PurchaseButton } from '../../components/PurchaseButton';
 
 // Sanityからデータをフェッチするクエリ
 const query = groq`
@@ -150,7 +150,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             />
           )}
         </div>
-        {/* <PurchaseButton /> */}
+        <PurchaseButton link="#pricing-section" />
       </section>
 
       {/* アバウトセクション */}
@@ -172,6 +172,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
                 />
               </div>
             )}
+            <PurchaseButton link="#pricing-section" />
           </section>
 
       {/* 特典セクション */}
@@ -207,10 +208,11 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             </div>
           )}
         </div>
+        <PurchaseButton link="#pricing-section" />
       </section>
 
       {/* 価格セクション */}
-      <section className="bg-white p-8 rounded-lg shadow-md">
+      <section id="pricing-section" className="bg-white p-8 rounded-lg shadow-md">
         <h2 className="text-3xl font-bold text-yellow-800 mb-6 text-center">{data.pricingSection.callToAction}</h2>
         <div className="text-center mb-8">
           <p className="text-2xl font-semibold text-gray-700">{data.pricingSection.trialPriceText}</p>
@@ -270,6 +272,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             />
           </div>
         )}
+        <PurchaseButton link="#pricing-section" />
       </section>
 
       {/* コンタクトセクション */}
@@ -278,6 +281,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
         <p className="text-lg text-gray-700 mb-8">
           {data.contactSection.instruction}
         </p>
+        <PurchaseButton link="#pricing-section" />
         {/* LINE公式アカウントへのリンクは別途追加 */}
         <a
           href="https://lin.ee/n652Uqp"

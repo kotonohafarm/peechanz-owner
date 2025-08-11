@@ -116,6 +116,22 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
     return <div className="text-center py-20 text-lg text-gray-700">コンテンツがありません。Sanity Studioでコンテンツを入力してください。</div>;
   }
 
+  const isRecruitmentPeriod = (periodString: string) => {
+    const today = new Date();
+    const currentDay = today.getDate(); // Get the current day of the month
+
+    const match = periodString.match(/(\d+)日～(\d+)日/);
+    if (match && match[1] && match[2]) {
+      const startDay = parseInt(match[1], 10);
+      const endDay = parseInt(match[2], 10);
+
+      return currentDay >= startDay && currentDay <= endDay;
+    }
+    return false; // Default to false if parsing fails
+  };
+
+  const recruitmentOpen = data.heroSection.recruitmentPeriod ? isRecruitmentPeriod(data.heroSection.recruitmentPeriod) : false;
+
   return (
     <div className="container mx-auto px-4 py-8 space-y-12">
       {/* ヒーローセクション */}
@@ -234,9 +250,10 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
           <p className="font-bold text-xl text-red-600 mt-2 bg-yellow-200 p-1 rounded">{data.pricingSection.promoCodeText}</p>
           <div className="text-center mb-8">
             <PurchaseButton
-              link={data.pricingSection.purchaseLink}
-              text="お試し価格で今すぐ申し込む"
-              messageClassName="text-white"
+              link={recruitmentOpen ? data.pricingSection.purchaseLink : '#'}
+              text={recruitmentOpen ? "お試し価格で今すぐ申し込む" : "募集期間外"}
+              messageClassName={recruitmentOpen ? "text-white" : "text-gray-400"}
+              disabled={!recruitmentOpen}
             />
           </div>
 

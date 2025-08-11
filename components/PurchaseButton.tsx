@@ -40,7 +40,7 @@ export const PurchaseButton: React.FC<PurchaseButtonProps> = ({ link }) => {
 
   if (!isRecruitmentPeriod) {
     return (
-      <p className="text-center text-lg text-gray-600 mt-8">
+      <p className="text-center text-xl font-bold text-red-600 mt-8">
         オーナー募集は毎月20日から25日限定
       </p>
     );

@@ -175,24 +175,26 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
           </p>
         ))}
         {/* ここに画像を追加 */}
-        <div className="flex flex-wrap justify-center gap-4 mt-8">
+        <div className="relative w-full max-w-lg mx-auto mt-8 h-80">
           {data.benefitsSection.benefitImage1 && (
-            <div className="w-full md:w-1/2 lg:w-1/3 h-64 relative">
+            <div className="absolute top-0 left-0 w-2/3 h-2/3">
               <Image
                 src={data.benefitsSection.benefitImage1.asset.url}
                 alt={data.benefitsSection.benefitImage1.alt || '特典画像1'}
                 fill={true}
                 style={{ objectFit: 'contain' }}
+                className="z-10"
               />
             </div>
           )}
           {data.benefitsSection.benefitImage2 && (
-            <div className="w-full md:w-1/2 lg:w-1/3 h-64 relative">
+            <div className="absolute bottom-0 right-0 w-2/3 h-2/3">
               <Image
                 src={data.benefitsSection.benefitImage2.asset.url}
                 alt={data.benefitsSection.benefitImage2.alt || '特典画像2'}
                 fill={true}
                 style={{ objectFit: 'contain' }}
+                className="z-20"
               />
             </div>
           )}

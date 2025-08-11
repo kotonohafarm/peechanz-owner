@@ -174,11 +174,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             </div>
           )}
         </div>
-        {recruitmentOpen ? (
-          <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
-        ) : (
-          <p className="text-xl font-bold text-red-600 mt-8">次回の共同オーナー募集は20日から25日まで</p>
-        )}
+        <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
       </section>
 
       {/* アバウトセクション */}
@@ -201,31 +197,31 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
               </div>
             )}
             <div className="text-center">
-              {recruitmentOpen ? (
-                <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
-              ) : (
-                <p className="text-xl font-bold text-white mt-8">次回の共同オーナー募集は20日から25日まで</p>
-              )}
+              <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
             </div>
           </section>
 
       {/* 特典セクション */}
       <section className="bg-yellow-50 p-8 rounded-lg shadow-md">
-        <h2 className="text-3xl font-bold text-yellow-800 mb-6">{data.benefitsSection.title}</h2>
-        {data.benefitsSection.benefitItems.map((block: PortableTextBlock, index: number) => (
-          <p key={index} className="text-lg text-gray-700 mb-4">
-            {block.children[0].text}
-          </p>
-        ))}
+        <h2 className="text-3xl font-bold text-yellow-800 mb-6">
+          {data.benefitsSection.title}
+        </h2>
+        {data.benefitsSection.benefitItems.map(
+          (block: PortableTextBlock, index: number) => (
+            <p key={index} className="text-lg text-gray-700 mb-4">
+              {block.children[0].text}
+            </p>
+          )
+        )}
         {/* ここに画像を追加 */}
         <div className="relative w-full max-w-lg mx-auto mt-8 h-80">
           {data.benefitsSection.benefitImage1 && (
             <div className="absolute top-0 left-0 w-2/3 h-2/3">
               <Image
                 src={data.benefitsSection.benefitImage1.asset.url}
-                alt={data.benefitsSection.benefitImage1.alt || '特典画像1'}
+                alt={data.benefitsSection.benefitImage1.alt || "特典画像1"}
                 fill={true}
-                style={{ objectFit: 'contain' }}
+                style={{ objectFit: "contain" }}
                 className="z-10"
               />
             </div>
@@ -234,20 +230,16 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             <div className="absolute bottom-0 right-0 w-2/3 h-2/3">
               <Image
                 src={data.benefitsSection.benefitImage2.asset.url}
-                alt={data.benefitsSection.benefitImage2.alt || '特典画像2'}
+                alt={data.benefitsSection.benefitImage2.alt || "特典画像2"}
                 fill={true}
-                style={{ objectFit: 'contain' }}
+                style={{ objectFit: "contain" }}
                 className="z-20"
               />
             </div>
           )}
         </div>
         <div className="text-center">
-          {recruitmentOpen ? (
-            <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
-          ) : (
-            <p className="text-xl font-bold text-red-600 mt-8">次回の共同オーナー募集は20日から25日まで</p>
-          )}
+          <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
         </div>
       </section>
 
@@ -323,11 +315,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
           </div>
         )}
         <div className="text-center">
-          {recruitmentOpen ? (
-            <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
-          ) : (
-            <p className="text-xl font-bold text-red-600 mt-8">次回の共同オーナー募集は20日から25日まで</p>
-          )}
+          <PurchaseButton link="#pricing-section" text="今すぐ共同オーナーになる" messageClassName="text-white" />
         </div>
       </section>
 

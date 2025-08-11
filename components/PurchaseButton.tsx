@@ -29,7 +29,7 @@ export const PurchaseButton: React.FC<PurchaseButtonProps> = ({
   };
 
   return (
-    <div className="inline-block rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 mt-8" style={{ backgroundColor: 'orange' }}>
+    <div className="inline-block rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 mt-8" style={{ backgroundColor: 'blue' }}>
       <a
         href={link}
         onClick={handleClick}

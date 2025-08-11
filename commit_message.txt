@@ -1,1 +1,0 @@
-Allow cdn.sanity.io domain for images

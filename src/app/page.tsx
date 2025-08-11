@@ -138,7 +138,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
       </section>
 
       {/* アバウトセクション */}
-      <section className="bg-amber-100 p-8 rounded-lg shadow-md">
+      <section className="bg-amber-700 p-8 rounded-lg shadow-md">
             <h2 className="text-3xl font-bold text-white mb-6">{data.aboutSection.title}</h2>
             {data.aboutSection.description.map((block: any, index: number) => (
               <p key={index} className="text-lg text-white mb-4">

@@ -254,7 +254,7 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
         <div className="text-center">
           <PurchaseButton 
             link={data.pricingSection.purchaseLink}
-            text="今すぐお試し価格で購入"
+            text="お試し価格で今すぐ申し込む"
             messageClassName="text-white"
           />
         </div>

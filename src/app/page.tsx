@@ -27,6 +27,10 @@ const query = groq`
     aboutSection {
       title,
       description,
+      aboutImage {
+        asset->{url},
+        alt,
+      },
     },
     benefitsSection {
       title,
@@ -135,13 +139,24 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
 
       {/* アバウトセクション */}
       <section className="bg-white p-8 rounded-lg shadow-md">
-        <h2 className="text-3xl font-bold text-yellow-800 mb-6">{data.aboutSection.title}</h2>
-        {data.aboutSection.description.map((block: any, index: number) => (
-          <p key={index} className="text-lg text-gray-700 mb-4">
-            {block.children[0].text}
-          </p>
-        ))}
-      </section>
+            <h2 className="text-3xl font-bold text-yellow-800 mb-6">{data.aboutSection.title}</h2>
+            {data.aboutSection.description.map((block: any, index: number) => (
+              <p key={index} className="text-lg text-gray-700 mb-4">
+                {block.children[0].text}
+              </p>
+            ))}
+            {/* ここに画像を追加 */}
+            {data.aboutSection.aboutImage && (
+              <div className="mt-8 w-full h-64 relative">
+                <Image
+                  src={data.aboutSection.aboutImage.asset.url}
+                  alt={data.aboutSection.aboutImage.alt || 'アバウト画像'}
+                  fill={true}
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
+            )}
+          </section>
 
       {/* 特典セクション */}
       <section className="bg-yellow-50 p-8 rounded-lg shadow-md">

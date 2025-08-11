@@ -67,6 +67,10 @@ const query = groq`
         question,
         answer,
       },
+      faqImage {
+        asset->{url},
+        alt,
+      },
     },
     contactSection {
       callToAction,
@@ -255,6 +259,17 @@ export default function PeechanzOwnerPage() { // Trigger redeploy
             </div>
           ))}
         </div>
+        {/* ここに画像を追加 */}
+        {data.faqSection.faqImage && (
+          <div className="mt-8 w-full h-64 relative mx-auto">
+            <Image
+              src={data.faqSection.faqImage.asset.url}
+              alt={data.faqSection.faqImage.alt || 'よくある質問画像'}
+              fill={true}
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+        )}
       </section>
 
       {/* コンタクトセクション */}
